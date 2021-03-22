@@ -1,0 +1,11 @@
+Day1:
+    - Learned React basic including component and state hook
+    - built static components including: Home, Form, NavBar, and Table
+Day2:
+    - Implemented state hooks and logics for components
+    - Learned and implemented react routes for NavBar and the detail page
+Day3:
+    - Implemented delete seleted
+    - lifting up the entry data state to App so that the sate can be shared with EntryDetails
+    - Implemented EntryDetails
+    
