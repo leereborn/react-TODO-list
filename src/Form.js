@@ -4,22 +4,22 @@ const MyForm = ({ handleAdd }) => {
   const input1 = {
     idAttr: "input1",
     typeAttr: "text",
-    labelText: "Description: ",
+    labelText: "Task: ",
   };
 
   const input2 = {
     idAttr: "input2",
     labelText: "Category: ",
     options: [
-      { value: "html", text: "HTML" },
-      { value: "css", text: "CSS" },
-      { value: "js", text: "JS" },
+      { value: "Work", text: "Work" },
+      { value: "Grocery", text: "Grocery" },
+      { value: "Workout", text: "Workout" },
     ],
   };
 
   const input3 = {
     idAttr: "input3",
-    labelText: "Content: ",
+    labelText: "Notes: ",
   };
 
   const [input1Value, setInput1Value] = useState("");
@@ -29,9 +29,9 @@ const MyForm = ({ handleAdd }) => {
   const handleOnSubmit = (e) => {
     e.preventDefault(); //prevent the page from refresh
     handleAdd({
-      description: input1Value,
+      task: input1Value,
       category: input2Value,
-      content: input3Value,
+      notes: input3Value,
     });
   };
 

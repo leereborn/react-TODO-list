@@ -10,16 +10,16 @@ const EntryDetails = ({ entries }) => {
     .map((item) => (
       <div className="detail" key={id}>
         <div>
-          <b>Description: </b>
-          {item.description}
+          <b>Task: </b>
+          {item.task}
         </div>
         <div>
           <b>Category: </b>
           {item.category}
         </div>
         <div>
-          <b>Content: </b>
-          {item.content}
+          <b>Notes: </b>
+          {item.notes}
         </div>
         <button onClick={history.goBack}>Back</button>
       </div>

@@ -1,5 +1,5 @@
 const About = () => {
-  return <div className="About">A toy React app</div>;
+  return <div className="about">A React TODO list app</div>;
 };
 
 export default About;

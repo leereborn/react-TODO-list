@@ -7,7 +7,12 @@ import { useState } from "react";
 
 function App() {
   const [entries, setEntry] = useState([
-    { id: 0, description: "test", category: "css", content: "test content" },
+    {
+      id: 0,
+      task: "Milk",
+      category: "Grocery",
+      notes: "3 bags",
+    },
   ]);
 
   const handleAdd = (entry) => {
@@ -29,18 +34,18 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path="/home">
+          <Route path="/react-TODO-list/about">
+            <About />
+          </Route>
+          <Route path="/react-TODO-list/:id">
+            <EntryDetails entries={entries} />
+          </Route>
+          <Route path="/react-TODO-list/">
             <Home
               handleAdd={handleAdd}
               handleDelete={handleDelete}
               entries={entries}
             />
-          </Route>
-          <Route exact path="/home/:id">
-            <EntryDetails entries={entries} />
-          </Route>
-          <Route exact path="/about">
-            <About />
           </Route>
         </Switch>
       </div>

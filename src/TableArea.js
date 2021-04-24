@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const TableArea = ({ entries, handleDelete }) => {
-  const heads = ["Description", "Category", "Operate"];
+  const heads = ["Task", "Category", "Operate"];
   let selected = [];
 
   const handleCheckboxChange = (e, id) => {
@@ -36,7 +36,7 @@ const TableArea = ({ entries, handleDelete }) => {
                 />
               </td>
               <td>
-                <Link to={`/home/${item.id}`}>{item.description}</Link>
+                <Link to={`/react-TODO-list/${item.id}`}>{item.task}</Link>
               </td>
               <td>{item.category}</td>
               <td>
